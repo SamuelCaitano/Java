@@ -1,4 +1,4 @@
-package appe;
+// Create and manipulate an Account object.
 
 /**
  *

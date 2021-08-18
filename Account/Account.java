@@ -1,5 +1,3 @@
-package appe;
-
 public class Account {
 
     private String name;
