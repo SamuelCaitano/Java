@@ -26,7 +26,7 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
     public Carro() {
         this.alarme = true;
 
-    }// fim do método construtor
+    }
 
     // metodo para travar o alarme do carro
     @Override
@@ -43,7 +43,7 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
             System.out.println("Você ligou o alarme do carro ");
             System.out.println("---------------");
         }
-    }// fim do método ligarAlarme()
+    }
 
     // metodo para destravar o alarme e carro
     @Override
@@ -58,7 +58,7 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
             System.out.println("Você desligou o alarme do carro, as portas foram destravadas ");
             System.out.println("---------------");
         }
-    } // fim do método desligarAlarme
+    }
 
     // método para fazer o som do alarme
     @Override
@@ -67,8 +67,8 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
             System.out.println("BiBi");
         } else {
             System.out.println("Bi");
-        } // fim da instrução de seleção if else
-    } // fim do método somAlarme
+        }
+    }
 
     // método para fazer o som do alarme desparado
     @Override
@@ -83,22 +83,23 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
                 }
             }
         }
-    }// fim do método despararAlarme
+    }
 
     // método para travar as portas
     @Override
     public void travarPortas() {
         this.portas = true;
         System.out.println("A porta está travada");
-    }// fim do método travarPortas
+    }
 
     // método para destravar as portas
     @Override
     public void destravarPortas() {
         this.portas = false;
         System.out.println("A porta está destravada");
-    }// fim do método destravarPortas
+    }
 
+    // método para fechar os vidros
     @Override
     public void subirVidros() {
         this.subirVidroFrenteDireito();
@@ -107,19 +108,21 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
         this.subirVidroAtrasEsquedo();
     }
 
+    // métodos dos vidros
     private void subirVidroFrenteEsquerdo() {
-        
+        System.out.println("Subindo o vidro esquerdo da frente ");
     }
 
     public void subirVidroFrenteDireito() {
-
+        System.out.println("Subindo o vidro direito da frente ");
     }
 
     public void subirVidroAtrasDireito() {
+        System.out.println("Subindo o vidro esquerdo de trás ");
     }
 
     private void subirVidroAtrasEsquedo() {
-
+        System.out.println("Subindo o vidro esquerdo de trás ");
     }
 
     // metodo para abrir o porta malas
@@ -127,7 +130,7 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
     public void abrirPortaMalas() {
         this.portaMalas = true;
         System.out.println("O porta-malas está aberto");
-    }// fim do método abrirPortaMalas
+    }
 
     // metodo para ligar o carro
     @Override
@@ -180,7 +183,7 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
             System.out.println("O carro já está parado");
             velocidadeAtual = 0;
         }
-    }// fim do métomo diminuirVelocidade
+    }
 
     // método para pisar na embreagem
     @Override
@@ -191,7 +194,7 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
             this.embreagem = true;
             System.out.println("Você pisou na embreagem");
         }
-    }// fim do método pisarEmbreagem
+    }
 
     // método para soltar a embreagem
     @Override
@@ -202,7 +205,7 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
             this.embreagem = false;
             System.out.println("Você tirou o pé da embreagem");
         }
-    }// fim do método soltarEmbreagem
+    }
 
     void MarchaCima() {
         if (marchaAtual == marchas) {
@@ -257,7 +260,7 @@ public class Carro extends Automovel implements Pedais, Chave, Portas, Sinalizac
                 System.out.println("piscando");// pisca quando aciona o alerta ou viola-se o carro
             } while (piscaAlerta > 1);
         }
-    } // fim do método piscaAlerta
+    }
 
     @Override
     public void luzDeRe() {

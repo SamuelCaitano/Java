@@ -22,6 +22,11 @@ public  class Main {
         System.out.println("O numero do renavan é " + c1.getRenavan());*/
         
         c1.ligarAlarme();
-        c1.desligarAlarme();       
+        c1.desligarAlarme();
+        c1.ligarAlarme();
+        c1.despararAlarme();
+        c1.ligar();
+        c1.desligar();
+               
     }
 }
