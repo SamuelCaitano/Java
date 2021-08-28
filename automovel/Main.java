@@ -10,7 +10,7 @@ public  class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Carro c1 = new Carro();
+        CarroEletrico c1 = new CarroEletrico();
         /*System.out.println("Informe a placa do carro: ");
         c1.placa = input.nextLine();
         System.out.print("Informe a cor do carro: ");
@@ -25,8 +25,10 @@ public  class Main {
         c1.desligarAlarme();
         c1.ligarAlarme();
         c1.despararAlarme();
-        c1.ligar();
-        c1.desligar();
+        c1.desligarAlarme();        
+        c1.aumentarVelocidade();
+        c1.aumentarVelocidade();
+        c1.aumentarVelocidade();
                
     }
 }

@@ -2,32 +2,34 @@ package automovel;
 
 /**
  *
- * @author smlca
+ * @author Samuel Caitano
  */
 public abstract class Automovel {
-    
+
     // Atributos
     protected int renavan;
     protected String placa;
     protected String chassi;
     protected String marca;
+    protected String categoria;
     protected String modelo;
     protected int anoFabricacao;
     protected String cor;
-    protected boolean TipoCombustivel;
-    protected int capacidadeTanque;
-    protected char cambio;
-    protected int marchas;
+    protected int autonomia;
+    protected char marcha;
     protected int qtdPortas;
-    protected boolean embreagem;
+    protected int qtdBancos;
+    protected boolean TampaCarregador;
     protected boolean acelerador;
     protected boolean freio;
-    
+    protected boolean tetoPanoramico;
+    protected boolean setaDireita;
+    protected boolean setaEsquerda;
     protected boolean ligado;
     protected boolean alarme;
-    protected double kmPorLitro;
-    
+
     // Métodos Especiais
+
     public int getRenavan() {
         return renavan;
     }
@@ -35,7 +37,7 @@ public abstract class Automovel {
     public void setRenavan(int renavan) {
         this.renavan = renavan;
     }
-      
+
     public String getPlaca() {
         return placa;
     }
@@ -52,13 +54,20 @@ public abstract class Automovel {
         this.chassi = chassi;
     }
 
-    
     public String getMarca() {
         return marca;
     }
 
     public void setMarca(String marca) {
         this.marca = marca;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
     public String getModelo() {
@@ -85,37 +94,22 @@ public abstract class Automovel {
         this.cor = cor;
     }
 
-    public boolean isTipoCombustivel() {
-        return TipoCombustivel;
+    public int getAutonomia() {
+        return autonomia;
     }
 
-    public void setTipoCombustivel(boolean TipoCombustivel) {
-        this.TipoCombustivel = TipoCombustivel;
+    public void setAutonomia(int autonomia) {
+        this.autonomia = autonomia;
     }
 
-    public int getCapacidadeTanque() {
-        return capacidadeTanque;
+    public char getMarcha() {
+        return marcha;
     }
 
-    public void setCapacidadeTanque(int capacidadeTanque) {
-        this.capacidadeTanque = capacidadeTanque;
+    public void setMarcha(char marcha) {
+        this.marcha = marcha;
     }
 
-    public char getCambio() {
-        return cambio;
-    }
-
-    public void setCambio(char cambio) {
-        this.cambio = cambio;
-    }
-    public int getMarchas() {
-        return marchas;
-    }
-
-    public void setMarchas(int marchas) {
-        this.marchas = marchas;
-    }
-    
     public int getQtdPortas() {
         return qtdPortas;
     }
@@ -123,13 +117,61 @@ public abstract class Automovel {
     public void setQtdPortas(int qtdPortas) {
         this.qtdPortas = qtdPortas;
     }
-    
-    public double getKmPorLitro() {
-        return kmPorLitro;
+
+    public int getQtdBancos() {
+        return qtdBancos;
     }
 
-    public void setKmPorLitro(double kmPorLitro) {
-        this.kmPorLitro = kmPorLitro;
+    public void setQtdBancos(int qtdBancos) {
+        this.qtdBancos = qtdBancos;
+    }
+
+    public boolean isTampaCarregador() {
+        return TampaCarregador;
+    }
+
+    public void setTampaCarregador(boolean TampaCarregador) {
+        this.TampaCarregador = TampaCarregador;
+    }
+
+    public boolean isAcelerador() {
+        return acelerador;
+    }
+
+    public void setAcelerador(boolean acelerador) {
+        this.acelerador = acelerador;
+    }
+
+    public boolean isFreio() {
+        return freio;
+    }
+
+    public void setFreio(boolean freio) {
+        this.freio = freio;
+    }
+
+    public boolean isTetoPanoramico() {
+        return tetoPanoramico;
+    }
+
+    public void setTetoPanoramico(boolean tetoPanoramico) {
+        this.tetoPanoramico = tetoPanoramico;
+    }
+
+    public boolean isSetaDireita() {
+        return setaDireita;
+    }
+
+    public void setSetaDireita(boolean setaDireita) {
+        this.setaDireita = setaDireita;
+    }
+
+    public boolean isSetaEsquerda() {
+        return setaEsquerda;
+    }
+
+    public void setSetaEsquerda(boolean setaEsquerda) {
+        this.setaEsquerda = setaEsquerda;
     }
 
     public boolean isLigado() {
@@ -146,5 +188,5 @@ public abstract class Automovel {
 
     public void setAlarme(boolean alarme) {
         this.alarme = alarme;
-    }
+    }    
 }
