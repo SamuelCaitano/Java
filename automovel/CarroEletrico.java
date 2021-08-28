@@ -4,7 +4,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.lang.model.SourceVersion;
 
-public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, Sinalizacao {
+public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, Sinalizacao, Seguranca {
 
     // atributos
     public int velocidadeMax;
@@ -15,8 +15,10 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
     public boolean portaTraseiraDireito;
     public boolean portaTraseiraEsquedo;
     public boolean portaMalas;
+    public boolean travaPortas;
     public boolean despararAlarme;
     public int piscaAlerta;
+    protected boolean freio;
     //protected float qtdAbastecerTanque;
     //public float dinheiro;
     //public float litros;
@@ -24,6 +26,8 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
     // Construtor
     public CarroEletrico() {
         this.alarme = true;
+        this.portas = true;
+        this.portaMalas = true;
         this.TampaCarregador = true;
         this.velocidadeAtual = 0;
         this.velocidadeMax = 250;
@@ -34,12 +38,13 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
     @Override
     public void ligarAlarme() {
         if (this.alarme == true) { // verifica se o valor de alarme é igual a true
+            this.piscaAlerta(1);
             System.out.println("O alarme já está ligado ");
-            this.piscaAlerta();
             System.out.println("---------------");
         } else { // executa se o valor de alarme for false
             this.alarme = true; // alarme recebe true
             this.somAlarme();// chama o método somAlarme
+            this.piscaAlerta(1);
             this.travarPortas(); // chama o método travarPortas()
             this.subirVidros(); // chama o método subirVidros()
             System.out.println("Você ligou o alarme do carro ");
@@ -51,11 +56,13 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
     @Override
     public void desligarAlarme() {
         if (this.alarme == false) { // executa se o valor for false
+            this.piscaAlerta(1);
             System.out.println("O alarme já está desligado ");
             System.out.println("---------------");
         } else { // executa se o valor de alarme for true
-            this.alarme = false; // alarme recebe false
+            this.alarme = false;
             this.somAlarme(); // chama o método somAlarme
+            this.piscaAlerta(1); //
             this.destravarPortas(); // chama o método destravarPortas
             this.ligado = true;
             System.out.println("Você desligou o alarme do carro, as portas foram destravadas ");
@@ -91,25 +98,52 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
     // método para travar as portas
     @Override
     public void travarPortas() {
-        this.portas = true;
-        System.out.println("A porta está travada");
-        System.out.println("---------------");
+        if (portas == true) {
+            System.out.println("A porta já está travada");
+            System.out.println("---------------");
+        } else {
+            this.portas = true;
+            System.out.println("A porta foi travada");
+            System.out.println("---------------");
+        }
     }
 
     // método para destravar as portas
     @Override
     public void destravarPortas() {
-        this.portas = false;
-        System.out.println("A porta está destravada");
-        System.out.println("---------------");
+        if (portas == false) {
+            System.out.println("A porta já está destravada");
+            System.out.println("---------------");
+        } else {
+            this.portas = false;// as portas foram destravadas
+            System.out.println("A porta foi destravada");
+            System.out.println("---------------");
+        }
     }
 
     // metodo para abrir o porta malas
     @Override
     public void abrirPortaMalas() {
-        this.portaMalas = true;
-        System.out.println("O porta-malas está aberto");
-        System.out.println("---------------");
+        if (portaMalas == false) {
+            System.out.println("O porta-malas já está aberto");
+            System.out.println("---------------");
+        } else {
+            this.portaMalas = false; // o porta malas foi aberto
+            System.out.println("O porta-malas foi aberto");
+            System.out.println("---------------");
+        }
+    }
+
+    @Override
+    public void fecharPortaMalas() {
+        if (portaMalas == true) {
+            System.out.println("O porta-malas já está fechado");
+            System.out.println("---------------");
+        } else {
+            this.portaMalas = true; // o porta malas foi fechado
+            System.out.println("O porta-malas foi fechado");
+            System.out.println("---------------");
+        }
     }
 
     // método para fechar os vidros
@@ -146,20 +180,25 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
 
     // método para aumentar a velocidade
     @Override
-    public void aumentarVelocidade() {
+    public void pisarAcelerador() {
         if (ligado == true) {
-            if (velocidadeAtual == velocidadeMax) {
-                System.out.println("Velocidade maxima já atingida ");
-                System.out.println("---------------");
-            } else if (velocidadeAtual >= 0) {
-                velocidadeAtual += 10;
-                //this.setVelocidadeAtual(10 + this.getVelocidadeAtual());
-                System.out.println("A velocidade do carro está em " + velocidadeAtual + "km/h");
-                System.out.println("---------------");
-                if (this.velocidadeAtual >= 10) {
+            if (portas = true) {
+                acelerador = true;
+                if (velocidadeAtual == velocidadeMax) {
+                    System.out.println("Velocidade maxima já atingida ");
+                    System.out.println("---------------");
+                } else if (velocidadeAtual >= 0) {
+                    velocidadeAtual += 10;
+                    System.out.println("A velocidade do carro está em " + velocidadeAtual + "km/h");
+                    System.out.println("---------------");
+
+                }
+                if (velocidadeAtual >= 10 && portas == false) {
                     System.out.println("Travamento automático das postas");
                     System.out.println("---------------");
                 }
+            } else {
+                System.out.println("Alguma porta está aberta");
             }
         } else {
             System.out.println("O carro está desligado, ligue-o primeiro");
@@ -169,7 +208,7 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
 
     // método para diminuir a velocidade
     @Override
-    public void diminuirVelocidade() {
+    public void pisarFreio() {
         if (velocidadeAtual > 0) {
             velocidadeAtual -= 10;
             System.out.println("A velocidade do carro está em " + velocidadeAtual + "km/h");
@@ -219,13 +258,13 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
 
     // método para indicar o pisca alerta do carro
     @Override
-    public void piscaAlerta() {
-        if (piscaAlerta == 1) {
-            System.out.println("piscando..");// pisca uma vez para indicar que está ligando ou desligando o alarme
+    public void piscaAlerta(int num) {
+        if (num == 1) {
+            System.out.println("piscando 1 vez..");// pisca uma vez para indicar que está ligando ou desligando o alarme
         } else {
             do {
                 System.out.println("piscando");// pisca quando aciona o alerta ou viola-se o carro
-            } while (piscaAlerta > 1);
+            } while (num > 1);
         }
     }
 
@@ -312,6 +351,26 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
 
     public SourceVersion getSupportedSourceVersion() {
         return SourceVersion.latest();
+    }
+
+    @Override
+    public void soltarAcelerador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void soltarFreio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void colocarSintoSegurança() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void retirarSintoSegurança() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 } // fim da classe Carro

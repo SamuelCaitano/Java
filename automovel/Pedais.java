@@ -2,6 +2,8 @@ package automovel;
 
 public interface Pedais {
     
-    void aumentarVelocidade();
-    void diminuirVelocidade();
+    void pisarAcelerador();
+    void soltarAcelerador();
+    void pisarFreio();
+    void soltarFreio();
 }

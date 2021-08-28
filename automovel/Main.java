@@ -21,14 +21,14 @@ public  class Main {
         c1.setRenavan(c1.renavan);
         System.out.println("O numero do renavan é " + c1.getRenavan());*/
         
-        c1.ligarAlarme();
-        c1.desligarAlarme();
-        c1.ligarAlarme();
-        c1.despararAlarme();
-        c1.desligarAlarme();        
-        c1.aumentarVelocidade();
-        c1.aumentarVelocidade();
-        c1.aumentarVelocidade();
+        //c1.ligarAlarme();
+        //c1.desligarAlarme();
+       // c1.ligarAlarme();
+       // c1.despararAlarme();
+        //c1.desligarAlarme();        
+       // c1.pisarAcelerador();
+       c1.fecharPortaMalas();
+       c1.abrirPortaMalas();
                
     }
 }

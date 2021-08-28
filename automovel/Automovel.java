@@ -27,6 +27,7 @@ public abstract class Automovel {
     protected boolean setaEsquerda;
     protected boolean ligado;
     protected boolean alarme;
+    
 
     // Métodos Especiais
 

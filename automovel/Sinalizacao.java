@@ -3,7 +3,7 @@ package automovel;
 public  interface Sinalizacao {
     void setaDireita();
     void setaEsquerda();
-    void piscaAlerta();
+    void piscaAlerta(int num);
     void luzDeRe();
     void LuzDeFreio();
     void farolBaixo();
