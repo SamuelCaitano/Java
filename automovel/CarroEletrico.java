@@ -4,34 +4,43 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.lang.model.SourceVersion;
 
-public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, Sinalizacao, Seguranca {
+public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, Sinalizacao, Seguranca, TetoPanoramico, Cambio {
 
-    // atributos
-    public int velocidadeMax;
-    public int velocidadeAtual;
-    public boolean portas;
-    public boolean portaDianteiraDireto;
-    public boolean portaDianteiraEsquerdo;
-    public boolean portaTraseiraDireito;
-    public boolean portaTraseiraEsquedo;
-    public boolean portaMalas;
-    public boolean travaPortas;
-    public boolean despararAlarme;
-    public int piscaAlerta;
-    protected boolean freio;
+    // atributos    
+    int velocidadeAtual;
+    boolean portas;
+    boolean portaDianteiraDireto;
+    boolean portaDianteiraEsquerdo;
+    boolean portaTraseiraDireito;
+    boolean portaTraseiraEsquedo;
+    boolean vidroFrenteDireito;
+    boolean vidroFrenteEsquerdo;
+    boolean vidroAtrasDireito;
+    boolean vidroAtrasEsquerdo;
+    boolean portaMalas;
+    boolean travaPortas;
+    boolean despararAlarme;
+    boolean sintoSeguranca;
+    boolean chavePresenca;
+    int piscaAlerta;
+    boolean tetoPanoramico;
+    boolean tetoBloqueado;
+
     //protected float qtdAbastecerTanque;
     //public float dinheiro;
     //public float litros;
-
     // Construtor
     public CarroEletrico() {
         this.alarme = true;
         this.portas = true;
         this.portaMalas = true;
         this.TampaCarregador = true;
+        this.sintoSeguranca = false;
+        this.chavePresenca = false;
         this.velocidadeAtual = 0;
         this.velocidadeMax = 250;
-
+        this.tetoPanoramico = true;
+        this.tetoBloqueado = true;
     }
 
     // metodo para travar o alarme do carro
@@ -180,7 +189,7 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
 
     // método para aumentar a velocidade
     @Override
-    public void pisarAcelerador() {
+    public void acelerar() {
         if (ligado == true) {
             if (portas = true) {
                 acelerador = true;
@@ -208,7 +217,7 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
 
     // método para diminuir a velocidade
     @Override
-    public void pisarFreio() {
+    public void frear() {
         if (velocidadeAtual > 0) {
             velocidadeAtual -= 10;
             System.out.println("A velocidade do carro está em " + velocidadeAtual + "km/h");
@@ -219,6 +228,16 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
             System.out.println("---------------");
         }
     }
+    
+    @Override
+    public void marcha(char marcha) {
+        if (this.alarme == true && this.portas == true){
+            System.out.println("Entre no carro primeiro");
+        } else {
+            this.marcha = 'R';
+        }
+    }
+
 
     @Override
     public void abrirPortas() {
@@ -263,6 +282,7 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
             System.out.println("piscando 1 vez..");// pisca uma vez para indicar que está ligando ou desligando o alarme
         } else {
             do {
+                // adcionar uma pausa de tempo
                 System.out.println("piscando");// pisca quando aciona o alerta ou viola-se o carro
             } while (num > 1);
         }
@@ -270,7 +290,9 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
 
     @Override
     public void luzDeRe() {
-        System.out.println("Luz de ré acesa");
+        if (this.marcha == 'R'){
+            System.out.println("Luz de ré acesa");
+        }        
     }
 
     @Override
@@ -285,7 +307,8 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
 
     @Override
     public void farolAlto() {
-
+        if(ligado == true)
+        System.out.println("O farol alto foi ativado");
     }
 
     @Override
@@ -293,6 +316,88 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public void soltarAcelerador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void soltarFreio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void colocarSintoSegurança() {
+        this.sintoSeguranca = true;
+        System.out.println("Você colocou o sinto");
+        System.out.println("---------------");
+    }
+
+    @Override
+    public void retirarSintoSegurança() {
+        this.sintoSeguranca = false;
+        System.out.println("Você retirou o sinto o sinto");
+        System.out.println("---------------");
+    }
+
+    // método para abrir o teto
+    @Override
+    public void abrirTeto() {
+        if (this.tetoBloqueado == true) { // verifica se o teto está bloqueado
+            System.out.println("Desbloqueie o teto primeiro");
+            System.out.println("---------------");
+        } else { // executa se o teto estiver desbloqueado
+            if (this.tetoPanoramico == false) { // verifica se o teto já esta aberto
+                System.out.println("O teto já está aberto");
+                System.out.println("---------------");
+            } else { // executa se o teto estiver fechado
+                this.tetoPanoramico = false;
+                System.out.println("O teto foi aberto");
+                System.out.println("---------------");
+            }
+        }
+    }
+
+    // método para fechar o teto
+    @Override
+    public void fecharTeto() {
+        if (this.tetoPanoramico == true) { // verifica se o teto está fechado
+            System.out.println("O teto já está fechado");
+            System.out.println("---------------");
+        } else { // executa se o teto estiver aberto
+            this.tetoPanoramico = true;
+            System.out.println("O teto foi fechado");
+            this.bloquearTeto(); // chama o método bloquearTeto()
+        }
+    }
+
+    // método para bloquear o teto
+    @Override
+    public void bloquearTeto() {
+        if (this.tetoBloqueado == true) { // verifica se o teto está bloqueado
+            System.out.println("O teto já está bloqueado");
+            System.out.println("---------------");
+        } else { // executa se o teto estiver desbloqueado
+            this.tetoBloqueado = true;
+            System.out.println("O teto foi bloqueado");
+            System.out.println("---------------");
+        }
+    }
+
+    // método para desbloquear o teto (trás segurança à integridade física dos passageiros)
+    @Override
+    public void desbloquearTeto() {
+        if (this.tetoBloqueado == false) { // verifica se o teto está desbloqueado
+            System.out.println("O teto já está desbloqueado");
+            System.out.println("---------------");
+        } else { // executa se o teto estiver bloqueado
+            this.tetoBloqueado = false;
+            System.out.println("O teto foi desbloqueado");
+            System.out.println("---------------");
+        }
+    }
+
+    // métodos Getter and Setter
     public int getVelocidadeMax() {
         return velocidadeMax;
     }
@@ -353,24 +458,6 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
         return SourceVersion.latest();
     }
 
-    @Override
-    public void soltarAcelerador() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void soltarFreio() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void colocarSintoSegurança() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void retirarSintoSegurança() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
 } // fim da classe Carro

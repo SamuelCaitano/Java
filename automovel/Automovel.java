@@ -7,35 +7,42 @@ package automovel;
 public abstract class Automovel {
 
     // Atributos
-    protected int renavan;
-    protected String placa;
+    protected double renavan;
+    protected String placa = "MGD-4480";
     protected String chassi;
-    protected String marca;
-    protected String categoria;
-    protected String modelo;
-    protected int anoFabricacao;
-    protected String cor;
-    protected int autonomia;
+    protected String marca = "Tesla";
+    protected String categoria = "Esportivo";
+    protected String modelo = "Model Mark X";
+    protected int anoFabricacao = 2022;
+    protected String cor = "Branco";
+    protected int autonomia = 620;
+    protected int velocidadeMax = 250;
     protected char marcha;
-    protected int qtdPortas;
-    protected int qtdBancos;
+    protected int qtdPortas = 4;
+    protected int qtdAssentos = 4;
     protected boolean TampaCarregador;
     protected boolean acelerador;
     protected boolean freio;
-    protected boolean tetoPanoramico;
     protected boolean setaDireita;
     protected boolean setaEsquerda;
     protected boolean ligado;
     protected boolean alarme;
+
+    @Override
+    public String toString() {
+        return "Automovel{" + "\nrenavan = " + renavan + "\nplaca = " + placa + ", chassi = " + chassi + ", marca=" + marca + ", categoria=" + categoria 
+                + ", modelo=" + modelo + ", anoFabricacao=" + anoFabricacao + ", cor=" + cor + ", autonomia=" + autonomia + ", marcha=" + marcha 
+                + ", qtdPortas=" + qtdPortas + ", qtdAssentos=" + qtdAssentos + '}';
+    }
     
 
     // Métodos Especiais
 
-    public int getRenavan() {
+    public double getRenavan() {
         return renavan;
     }
 
-    public void setRenavan(int renavan) {
+    public void setRenavan(double renavan) {
         this.renavan = renavan;
     }
 
@@ -119,12 +126,12 @@ public abstract class Automovel {
         this.qtdPortas = qtdPortas;
     }
 
-    public int getQtdBancos() {
-        return qtdBancos;
+    public int getQtdAssentos() {
+        return qtdAssentos;
     }
 
-    public void setQtdBancos(int qtdBancos) {
-        this.qtdBancos = qtdBancos;
+    public void setQtdAssentos(int qtdAssentos) {
+        this.qtdAssentos = qtdAssentos;
     }
 
     public boolean isTampaCarregador() {
@@ -149,14 +156,6 @@ public abstract class Automovel {
 
     public void setFreio(boolean freio) {
         this.freio = freio;
-    }
-
-    public boolean isTetoPanoramico() {
-        return tetoPanoramico;
-    }
-
-    public void setTetoPanoramico(boolean tetoPanoramico) {
-        this.tetoPanoramico = tetoPanoramico;
     }
 
     public boolean isSetaDireita() {
