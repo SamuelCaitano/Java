@@ -6,6 +6,7 @@ public  interface Sinalizacao {
     void piscaAlerta(int num);
     void luzDeRe();
     void LuzDeFreio();
+    void LuzPortaMalas();
     void farolBaixo();
     void farolAlto();
     void bozina();

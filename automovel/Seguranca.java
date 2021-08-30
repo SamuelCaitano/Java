@@ -2,6 +2,7 @@ package automovel;
 
 public interface Seguranca {
     
-    void colocarSintoSegurança();
-    void retirarSintoSegurança();
+    void colocarSintoSeguranca();
+    void retirarSintoSeguranca();
+    void seguranca();
 }
