@@ -1,5 +1,3 @@
-package aritmetica;
-
 public class Aritmetica 
 {
     // método main inicia a execusão do aplicativo Java
