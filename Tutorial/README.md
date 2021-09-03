@@ -9,6 +9,9 @@ Neste documento, será apresentado a programação de app Java, começaremos com
 
 ![imga](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/imagens/img01_OlaMundo.png)
 
+BOA PRÁTICA DE PROGRAMAÇÃO :+1::green_book:|
+:--------------------------- |
+Algumas organizações exigem que todo programa comece com um comentário, informando o objetivo e o autor dele, data e a hora que foi modificado pela última vez. A medida que for escrevendo novos códigos, mantenha os comentários atualizados. Comente apenas o necessário|
 ## ***Declarando uma classe***
 <code>public class Intro</code>
 
@@ -24,6 +27,10 @@ O Java faz **distinção entre maiúscolas e minúsculas** - são diferentes - a
 ## ***Corpo de classe***
 A **chave esquerda** (como na linha 2), **{** , inicia o **corpo** de cada declaração. Uma **chave direita** correspondente (na linha 8), **}** , termina cada declaração de classe
 
+ERRO COMUM DE PROGRAMAÇÃO :-1::closed_book:|
+:--------------------------- |
+ Esquecer um dos delimitadores causa **erro de sintaxe**
+
 ## ***Declarando um método***
   <code>public static void main(String[] args)</code>
   
@@ -32,8 +39,10 @@ A palavra-chave **void** indica que esse método *não* retornará nenhuma infor
 As chaves esquerda e direita nas linhas 5 e 7, delimitam o **corpo da declaração do método**.
 
 ## ***Gerando saída com System.out.println***
-<code>System.out.println()</code>
+<code>System.out.println("Olá Mundo!");</code>
 
+Exibe os caracteres contidos entre as aspas dupla (mas as aspas não serão exibidas). Espaços em branco não serão ignorados pelo compilador.
+O método **System.out.println** exibe (ou imprime) uma linha de texto. Não podemos nos esquecer de colocar o **ponto e vírgula(;)** no final da instrução.
 
 
 
