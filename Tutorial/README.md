@@ -7,8 +7,32 @@ Neste documento, será apresentado a programação de app Java, começaremos com
 
 <h1>1.2 Primeiro programa Java: imprimindo o "Olá Mundo"</h1>
 
-![imga](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/img/img01_OlaMundo.png)
-Na linha
+![imga](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/imagens/img01_OlaMundo.png)
+
+## ***Declarando uma classe***
+<code>public class Intro</code>
+
+Na linha 1, temos a declaração da **classe Intro**, todo programa consiste em pelo menos uma classe, deve ser definido desta forma:<br><br> 
+Exemplo: **NomeDaClasse**<br>
+
+## ***Nomes e identificadores de classe***
+<code>value ! Value</code>
+
+Por convenção, os nomes de classes apresenta a letra inicial de cada palavra que eles incluem em maiúscula e o restante minúsculo.
+O Java faz **distinção entre maiúscolas e minúsculas** - são diferentes - assim, *value e Value* são identificadores diferentes (mas ambos válidos) 
+
+## ***Corpo de classe***
+A **chave esquerda** (como na linha 2), **{** , inicia o **corpo** de cada declaração. Uma **chave direita** correspondente (na linha 8), **}** , termina cada declaração de classe
+
+## ***Declarando um método***
+  <code>public static void main(String[] args)</code>
+  
+É o ponto de partida de cada app Java. Os parênteses depois do indentificador *main* indicam que ele é um **método**.
+A palavra-chave **void** indica que esse método *não* retornará nenhuma informação.
+As chaves esquerda e direita nas linhas 5 e 7, delimitam o **corpo da declaração do método**.
+
+## ***Gerando saída com System.out.println***
+<code>System.out.println()</code>
 
 
 
