@@ -44,6 +44,31 @@ As chaves esquerda e direita nas linhas 5 e 7, delimitam o **corpo da declaraç�
 Exibe os caracteres contidos entre as aspas dupla (mas as aspas não serão exibidas). Espaços em branco não serão ignorados pelo compilador.
 O método **System.out.println** exibe (ou imprime) uma linha de texto. Não podemos nos esquecer de colocar o **ponto e vírgula(;)** no final da instrução.
 
+# 1.3 Entrada de dados : apartir da classe Scanner
+Nosso proxímo porgrama lê dois **inteiros**, digitados por um usuário no teclado, calcula sua soma e a exibe.
+
+![](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/ex05_EntradaDoTeclado/img02_EntradaDeDados.png)
+
+## ***Declaração import***
+<code>import java.util.Scanner;</code>
+
+Ponto forte do Java é seu rico conjunto de classes predefinidas que você pode **reutilizar** em vez de "reinventar a roda".
+Essas classes são agrupadas em **pacotes** - chamadas de  **bibliotecas de classes Java**, ou **Java Programming Interface (Java API)**.<br>
+É uma **declaracão import** que ajuda o compilador a localizar um classe utilizada nesse programa
+
+ERRO COMUM DE PROGRAMAÇÃO :-1::closed_book:|
+:--------------------------- |
+ Esquecer de incluir uma declaração **import** resulta em erro de cmpilação
+ 
+ERRO COMUM DE PROGRAMAÇÃO :-1::closed_book:|
+:--------------------------- |
+ Todas as declarações **import** devem aparecer antes da primeira declaração da classe no programa. Incluir dentro ou depois de uma declaração de classe é um erro de sintaxe.
+
+## ***Declarando e criando um Scanner***
+<code>Scanner input = new Scanner(System.in)</code>
+
+Na linha 11 é uma **instrução de declaração de váriavel** que especifica o nome (*input*) e o tipo (*Scanner*) de uma váriavel utlizada nesse programa. Um **Scanner** permite leitura de dados (por exemplo, números e strings).
+O sinal de  igual (=) indica que a váriavel Scanner Input deve se **inicializada**. A palavra-chave **new** cria um objeto Scanner. O **objeto de entrada padrão, System in**, permite a leitura de *bits* de informações digitados pelo usúario.
 
 
 # Aritmética
