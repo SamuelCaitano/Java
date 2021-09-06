@@ -9,7 +9,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp; 1.2.5 [Gerando saída com System.out.println](#gerando-saída)<br>
 1.3 [Entrada de dados apartir da classe Scanner](#entrada-de-dados-apartir-da-classe-scanner)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.3.1 [Declaração import](#declaração-import)<br>
-&nbsp;&nbsp;&nbsp;&nbsp; 1.3.2 [Corpo de classe](#declarando-e-criando-um-scanner)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.3.2 [Declarando e criando um Scanner](#declarando-e-criando-um-scanner)<br>
 
 
 # Introdução 
