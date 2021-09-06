@@ -1,9 +1,13 @@
 
 
-- [1.1 Introdução](#introdução) 
-- [1.2 Primeiro programa Java : imprimindo o "Olá Mundo"](#primeiro-programa-java)
+1.1 [Introdução](#introdução)<br>
+1.2 [Primeiro programa Java : imprimindo o "Olá Mundo"](#primeiro-programa-java)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.1 [Declarando uma classe](#declarando-uma-classe)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.2 [Nomes e identificadores de classe](#nomes-e-identificadores-de-classe)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.3 [Corpo de classe](#corpo-de-classe)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.4 [Declarando um método](#declarando-um-método)
 
-# Introdução
+# Introdução 
 
 Neste documento, será apresentado a programação de app Java, começaremos com exemplos básicos, até problemas mais complexos. Se preferir utilizar um ambiente de desenvolvimento integrado(integrated development environment - IDE) - existem ótimas opções, como, Eclipse, Intellij IDEA e o NetBeans o qual, eu gosto de utilizar, mas fica a seu critério.<br><br>
 
@@ -19,7 +23,7 @@ BOA PRÁTICA DE PROGRAMAÇÃO :+1::green_book:|
 :--------------------------- |
 Algumas organizações exigem que todo programa comece com um comentário, informando o objetivo e o autor dele, data e a hora que foi modificado pela última vez. A medida que for escrevendo novos códigos, mantenha os comentários atualizados. Comente apenas o necessário|
 ## ***Declarando uma classe***
-<code>public class Intro</code>
+```public class Intro```
 
 Na linha 1, temos a declaração da **classe Intro**, todo programa consiste em pelo menos uma classe, deve ser definido desta forma:<br><br> 
 Exemplo: **NomeDaClasse**<br>
