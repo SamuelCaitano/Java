@@ -7,7 +7,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp; 1.2.3 [Corpo de classe](#corpo-de-classe)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.2.4 [Declarando um método](#declarando-um-método)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.2.5 [Gerando saída com System.out.println](#gerando-saída)<br>
-1.3 [Entrada de dados : apartir da classe Scanner](entrada-de-dados-apartir-da-classe-scanner)<br>
+1.3 [Entrada de dados apartir da classe Scanner](#entrada-de-dados-apartir-da-classe-scanner)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.3.1 [Declaração import](#declaração-import)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.3.2 [Corpo de classe](#declarando-e-criando-um-scanner)<br>
 
@@ -59,7 +59,7 @@ As chaves esquerda e direita nas linhas 5 e 7, delimitam o **corpo da declaraç�
 Exibe os caracteres contidos entre as aspas dupla (mas as aspas não serão exibidas). Espaços em branco não serão ignorados pelo compilador.
 O método **System.out.println** exibe (ou imprime) uma linha de texto. Não podemos nos esquecer de colocar o **ponto e vírgula(;)** no final da instrução.
 
-# 1.3 Entrada de dados : apartir da classe Scanner
+# Entrada de dados apartir da classe Scanner
 Nosso proxímo porgrama lê dois **inteiros**, digitados por um usuário no teclado, calcula sua soma e a exibe.
 
 ![](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/ex05_EntradaDoTeclado/img02_EntradaDeDados.png)
