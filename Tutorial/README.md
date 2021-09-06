@@ -5,7 +5,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp; 1.2.1 [Declarando uma classe](#declarando-uma-classe)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.2.2 [Nomes e identificadores de classe](#nomes-e-identificadores-de-classe)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.2.3 [Corpo de classe](#corpo-de-classe)<br>
-&nbsp;&nbsp;&nbsp;&nbsp; 1.2.4 [Declarando um método](#declarando-um-método)
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.4 [Declarando um método](#declarando-um-método)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.5 [Gerando saída com System.out.println](#gerando-saída)<br>
+1.3 [Entrada de dados : apartir da classe Scanner](entrada-de-dados-apartir-da-classe-scanner)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.3.1 [Declaração import](#declaração-import)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.3.2 [Corpo de classe](#declarando-e-criando-um-scanner)<br>
+
 
 # Introdução 
 
@@ -48,7 +53,7 @@ ERRO COMUM DE PROGRAMAÇÃO :-1::closed_book:|
 A palavra-chave **void** indica que esse método *não* retornará nenhuma informação.
 As chaves esquerda e direita nas linhas 5 e 7, delimitam o **corpo da declaração do método**.
 
-## ***Gerando saída com System.out.println***
+## ***Gerando saída***
 <code>System.out.println("Olá Mundo!");</code>
 
 Exibe os caracteres contidos entre as aspas dupla (mas as aspas não serão exibidas). Espaços em branco não serão ignorados pelo compilador.
