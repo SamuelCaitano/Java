@@ -117,7 +117,7 @@ BOA PRÁTICA DE PROGRAMAÇÃO :+1::green_book:|
 Por convenção, identificadores de nomes de variáveis iniciam com letra mínuscula e cada palavra após a primeira palavra começa com uma letra maiúscula. Exemplo: ```nomeCompleto```|
 
 ## ***Obtendo um int como entrada do usuário***
-Nas linhas 16 e 21
+Nas linhas 18 e 21
 
 ![](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/imagens/obtendo-entrada.png)
 
