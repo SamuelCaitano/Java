@@ -1,11 +1,26 @@
-<h1>1.1 Introdução</h1>
+
+
+1.1 [Introdução](#introdução)<br>
+1.2 [Primeiro programa Java : imprimindo o "Olá Mundo"](#primeiro-programa-java)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.1 [Declarando uma classe](#declarando-uma-classe)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.2 [Nomes e identificadores de classe](#nomes-e-identificadores-de-classe)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.3 [Corpo de classe](#corpo-de-classe)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.4 [Declarando um método](#declarando-um-método)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.2.5 [Gerando saída com System.out.println](#gerando-saída)<br>
+1.3 [Entrada de dados apartir da classe Scanner](#entrada-de-dados-apartir-da-classe-scanner)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.3.1 [Declaração import](#declaração-import)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.3.2 [Declarando e criando um Scanner](#declarando-e-criando-um-scanner)<br>
+
+
+# Introdução 
+
 Neste documento, será apresentado a programação de app Java, começaremos com exemplos básicos, até problemas mais complexos. Se preferir utilizar um ambiente de desenvolvimento integrado(integrated development environment - IDE) - existem ótimas opções, como, Eclipse, Intellij IDEA e o NetBeans o qual, eu gosto de utilizar, mas fica a seu critério.<br><br>
 
 [Download Eclipse](https://www.eclipse.org/downloads/packages/installer)<br>
 [Download Intellij](https://www.jetbrains.com/pt-br/idea/download/#section=windows)<br>
 [Download NetBeans](https://netbeans.apache.org/download/index.html)
 
-<h1>1.2 Primeiro programa Java: imprimindo o "Olá Mundo"</h1>
+# Primeiro programa Java
 
 ![imga](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/imagens/img01_OlaMundo.png)
 
@@ -13,7 +28,7 @@ BOA PRÁTICA DE PROGRAMAÇÃO :+1::green_book:|
 :--------------------------- |
 Algumas organizações exigem que todo programa comece com um comentário, informando o objetivo e o autor dele, data e a hora que foi modificado pela última vez. A medida que for escrevendo novos códigos, mantenha os comentários atualizados. Comente apenas o necessário|
 ## ***Declarando uma classe***
-<code>public class Intro</code>
+```public class Intro```
 
 Na linha 1, temos a declaração da **classe Intro**, todo programa consiste em pelo menos uma classe, deve ser definido desta forma:<br><br> 
 Exemplo: **NomeDaClasse**<br>
@@ -38,13 +53,13 @@ ERRO COMUM DE PROGRAMAÇÃO :-1::closed_book:|
 A palavra-chave **void** indica que esse método *não* retornará nenhuma informação.
 As chaves esquerda e direita nas linhas 5 e 7, delimitam o **corpo da declaração do método**.
 
-## ***Gerando saída com System.out.println***
+## ***Gerando saída***
 <code>System.out.println("Olá Mundo!");</code>
 
 Exibe os caracteres contidos entre as aspas dupla (mas as aspas não serão exibidas). Espaços em branco não serão ignorados pelo compilador.
 O método **System.out.println** exibe (ou imprime) uma linha de texto. Não podemos nos esquecer de colocar o **ponto e vírgula(;)** no final da instrução.
 
-# 1.3 Entrada de dados : apartir da classe Scanner
+# Entrada de dados apartir da classe Scanner
 Nosso proxímo porgrama lê dois **inteiros**, digitados por um usuário no teclado, calcula sua soma e a exibe.
 
 ![](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/ex05_EntradaDoTeclado/img02_EntradaDeDados.png)
