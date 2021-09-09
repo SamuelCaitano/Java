@@ -96,7 +96,7 @@ As instruções de declaração de variável nas linhas 13 a 15
 
 declaramos que as variáveis num1, num2 e soma armaznam dados do tipo **int** - elas podem armazenar valores *inteiros* (exemple: 23, -1129, 0). Essas variáveis ainda não são inicializadas. O intervalo para um **int** é **-2.147.483.648** a **+2.147.483.647**.
 
-```OBS:``` os valores *int* que você usa em um programa não podem conter postos.
+```OBS:``` os valores *int* que você usa em um programa não podem conter pontos.
 
 Veremos mais sobre **tipos primitivos** mais a frente. As linha 13 a 15 também podem ser escritas como:
 
