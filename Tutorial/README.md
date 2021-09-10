@@ -10,6 +10,8 @@
 1.3 [Entrada de dados apartir da classe Scanner](#entrada-de-dados-apartir-da-classe-scanner)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.3.1 [Declaração import](#declaração-import)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.3.2 [Declarando e criando um Scanner](#declarando-e-criando-um-scanner)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.3.3 [Declarando variáveis para armazenar números inteiros](#declarando-variáveis-para-armazenar-números-inteiros)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.3.4 [Obtendo um int como entrada do usuário](#obtendo-um-int-como-entrada-do-usuário)<br>
 
 
 # Introdução 
@@ -84,6 +86,56 @@ ERRO COMUM DE PROGRAMAÇÃO :-1::closed_book:|
 
 Na linha 11 é uma **instrução de declaração de váriavel** que especifica o nome (*input*) e o tipo (*Scanner*) de uma váriavel utlizada nesse programa. Um **Scanner** permite leitura de dados (por exemplo, números e strings).
 O sinal de  igual (=) indica que a váriavel Scanner Input deve se **inicializada**. A palavra-chave **new** cria um objeto Scanner. O **objeto de entrada padrão, System in**, permite a leitura de *bits* de informações digitados pelo usúario.
+
+
+## ***Declarando variáveis para armazenar números inteiros***
+
+As instruções de declaração de variável nas linhas 13 a 15
+
+![](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/imagens/variaveis-int-01.png)
+
+declaramos que as variáveis num1, num2 e soma armaznam dados do tipo **int** - elas podem armazenar valores *inteiros* (exemple: 23, -1129, 0). Essas variáveis ainda não são inicializadas. O intervalo para um **int** é **-2.147.483.648** a **+2.147.483.647**.
+
+```OBS:``` os valores *int* que você usa em um programa não podem conter pontos.
+
+Veremos mais sobre **tipos primitivos** mais a frente. As linha 13 a 15 também podem ser escritas como:
+
+![](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/imagens/variaveis-int-02.png)
+
+Sendo as do mesmo tipo de dado, basta separá-las por vírgula.
+
+BOA PRÁTICA DE PROGRAMAÇÃO :+1::green_book:|
+:--------------------------- |
+Declarar cada variável com sua própria declaração permite que um comentário descritivo seja inserido, de modo geral torna o código fácil de ler|
+
+BOA PRÁTICA DE PROGRAMAÇÃO :+1::green_book:|
+:--------------------------- |
+Escolher nomes de variáveis signifcativas ajuda o programa a ser autodocumentado(diminuindo a quantidade excessivo de comentários)|
+
+BOA PRÁTICA DE PROGRAMAÇÃO :+1::green_book:|
+:--------------------------- |
+Por convenção, identificadores de nomes de variáveis iniciam com letra mínuscula e cada palavra após a primeira palavra começa com uma letra maiúscula. Exemplo: ```nomeCompleto```|
+
+## ***Obtendo um int como entrada do usuário***
+Nas linhas 18 e 21
+
+![](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/imagens/obtendo-entrada.png)
+
+utiliza o método **nexInt** do valor do input do objeto Scanner para obter um inteiro digitado peloo usúario. Nesse momento o programa aguarda que usúario digite o número e tecla *Enter*.
+
+Nosso programa assume que o usúario insere um valor válido de inteiro. Se não, um erro de lógica em tempo de execução ocorrerá. Mais a frente veremos sobre **Tratamento de exeção**.
+
+A instrução inteira ```input.nextInt();``` apartir do **operador binário** ```=``` atribui um valor a váriavel.
+
+
+
+
+
+
+
+
+
+
 
 
 # Aritmética
