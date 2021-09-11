@@ -19,7 +19,7 @@ public abstract class Automovel {
     protected int velocidadeMax = 250;
     protected char marcha;
     protected int qtdPortas = 4;
-    protected int qtdAssentos = 4;
+    protected int qtdAssentos = 5;
     protected boolean TampaCarregador;
     protected boolean acelerador;
     protected boolean freio;
@@ -30,9 +30,8 @@ public abstract class Automovel {
 
     @Override
     public String toString() {
-        return "Automovel{" + "\nrenavan = " + renavan + "\nplaca = " + placa + ", chassi = " + chassi + ", marca=" + marca + ", categoria=" + categoria 
-                + ", modelo=" + modelo + ", anoFabricacao=" + anoFabricacao + ", cor=" + cor + ", autonomia=" + autonomia + ", marcha=" + marcha 
-                + ", qtdPortas=" + qtdPortas + ", qtdAssentos=" + qtdAssentos + '}';
+        return "Automovel{" + "\nrenavan = " + renavan + "\nplaca = " + placa + "\nchassi = " + chassi + "\nmarca = " + marca + "\ncategoria = " + categoria 
+                + "\nmodelo = " + modelo + "\nanoFabricacao =" + anoFabricacao + "\ncor = " + cor + "\nautonomia = " + autonomia + "\nqtdPortas = " + qtdPortas + "\nqtdAssentos = " + qtdAssentos + '}';
     }
     
 

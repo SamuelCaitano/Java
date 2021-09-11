@@ -7,29 +7,26 @@ import javax.lang.model.SourceVersion;
 public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, Sinalizacao, Seguranca, TetoPanoramico, Cambio, Vidros {
 
     // atributos    
-    int velocidadeAtual;
-    boolean portas;
-    boolean portaDianteiraDireto;
-    boolean portaDianteiraEsquerdo;
-    boolean portaTraseiraDireito;
-    boolean portaTraseiraEsquedo;
-    boolean vidroFrenteDireito;
-    boolean vidroFrenteEsquerdo;
-    boolean vidroAtrasDireito;
-    boolean vidroAtrasEsquerdo;
-    boolean portaMalas;
-    boolean luzPortaMalas;
-    boolean travaPortas;
-    boolean despararAlarme;
-    boolean sintoSeguranca;
-    boolean chavePresenca;
-    int piscaAlerta;
-    boolean tetoPanoramico;
-    boolean tetoBloqueado;
+    public int velocidadeAtual;
+    public boolean portas;
+    public boolean portaDianteiraDireto;
+    public boolean portaDianteiraEsquerdo;
+    public boolean portaTraseiraDireito;
+    public boolean portaTraseiraEsquedo;
+    public boolean vidroFrenteDireito;
+    public boolean vidroFrenteEsquerdo;
+    public boolean vidroAtrasDireito;
+    public boolean vidroAtrasEsquerdo;
+    public boolean portaMalas;
+    public boolean luzPortaMalas;
+    public boolean travaPortas;
+    public boolean despararAlarme;
+    public boolean sintoSeguranca;
+    public boolean chavePresenca;
+    public int piscaAlerta;
+    public boolean tetoPanoramico;
+    public boolean tetoBloqueado;
 
-    //protected float qtdAbastecerTanque;
-    //public float dinheiro;
-    //public float litros;
     // Construtor
     public CarroEletrico() {
         this.alarme = true; //ligado
@@ -259,9 +256,11 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
     public void frear() {
         if (velocidadeAtual > 0) {
             velocidadeAtual -= 10;
+            this.LuzDeFreio();
             System.out.println("A velocidade do carro está em " + velocidadeAtual + "km/h");
             System.out.println("---------------");
         } else {
+            this.LuzDeFreio();
             System.out.println("O carro já está parado");
             velocidadeAtual = 0;
             System.out.println("---------------");
@@ -340,7 +339,7 @@ public class CarroEletrico extends Automovel implements Pedais, Chave, Portas, S
 
     @Override
     public void farolBaixo() {
-
+        System.out.println("Farol de freio aceso");
     }
 
     @Override

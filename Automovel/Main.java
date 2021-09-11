@@ -1,21 +1,18 @@
 package automovel;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  *
- * @author smlca
+ * @author SamuelCaitano
  */
 public  class Main {
 
     public static void main(String[] args) {
        
-        Scanner input = new Scanner(System.in);
+        //Scanner input = new Scanner(System.in);
         CarroEletrico c1 = new CarroEletrico();
-        //System.out.println(c1.toString());
         
-        c1.LuzPortaMalas();
-        c1.abrirPortaMalas();
-        c1.abrirPortaMalas();
+        //System.out.println(c1.toString());
     }
 }
