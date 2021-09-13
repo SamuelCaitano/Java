@@ -12,6 +12,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp; 1.3.2 [Declarando e criando um Scanner](#declarando-e-criando-um-scanner)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.3.3 [Declarando variáveis para armazenar números inteiros](#declarando-variáveis-para-armazenar-números-inteiros)<br>
 &nbsp;&nbsp;&nbsp;&nbsp; 1.3.4 [Obtendo um int como entrada do usuário](#obtendo-um-int-como-entrada-do-usuário)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.3.4 [Usando variáveis em cálculo](#usando-variáveis-em-cálculo)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1.3.4 [Documentação da JAVA API](#documentação-da-java-api)<br>
+1.4 [Aritmética](#aritmética)<br>
 
 
 # Introdução 
@@ -127,16 +130,16 @@ Nosso programa assume que o usúario insere um valor válido de inteiro. Se não
 
 A instrução inteira ```input.nextInt();``` apartir do **operador binário** ```=``` atribui um valor a váriavel.
 
+## ***Usando variáveis em cálculo***
+A linha 23 <br>
+<code>soma = num1 + num2;</code>
 
+é uma instrução de atribuição que calcula a soma das variáveis **num1** e **num2** e então, atribui o resultado à variável **soma** utilizando o operador de atribuição, **=**. A instrução é lida como, **"soma *obtém* o valor de num1 + num 2"**. As partes das instruções que realizam cálculos são chamados **expressões**.
 
+## ***Documentação da JAVA API***
+Para cada nova classe da Java API que utilizamos, indicamos o pacote que ela está localizada. Essas informações ajudam a encontrar descrções de cada pacote e classe na documentação da Java API
 
-
-
-
-
-
-
-
+[**Documentação Java API : Clique aqui**](https://docs.oracle.com/javase/8/docs/api/)
 
 # Aritmética
 A maioria dos programas realizam cálculos aritméticos.
