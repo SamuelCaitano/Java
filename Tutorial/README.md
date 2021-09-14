@@ -1,5 +1,3 @@
-![](https://github.com/SamuelCaitano/Java/blob/main/Tutorial/imagens/logo.jpg)
-
 
 1.1 [Introdução](#introdução)<br>
 1.2 [Primeiro programa Java : imprimindo o "Olá Mundo"](#primeiro-programa-java)<br>
