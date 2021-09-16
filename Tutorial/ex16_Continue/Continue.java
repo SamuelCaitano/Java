@@ -8,13 +8,15 @@ public class Continue
             /*  se a condição do if for true,
                 pula as proximas instruções,
                 e prossegue para as proximas iteração do loop */
-            if (i == 3) {
+            if (i == 3) 
+            {
                 continue;
             }
 
             System.out.print(i + " ");
-        }
+        } // fim do loop for
+        
         System.out.println("\nFIM!");
-    }
-}
+    } // fim do método main
+} // fim da classe Continue
 
