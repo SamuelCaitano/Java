@@ -8,7 +8,6 @@ public class For
         // cria um Scanner para obter entrada a partir da janela de comando
         Scanner input = new Scanner(System.in);
         
-        int i;// varíavel do tipo inteiro para o contador do laço For
         int num;
         
         System.out.print("Informe qual tabuada você quer: ");
@@ -17,7 +16,8 @@ public class For
         /* iniciamos o contador em 1, verificamos se o contador atende a condição,
         após realizar a intrução dentro do for, incrementa 1 ao contador 
         esse loop será realizado até que contador seja MENOR IGUAL a 10*/
-        for (i = 1; i <= 10; i++){
+        for (int i = 1; i <= 10; i++)
+	{
             System.out.println(num + "x" + i +  " = " + (num*i) );
         }
     }    

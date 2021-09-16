@@ -9,14 +9,13 @@ public class If_Else
         Scanner input = new Scanner(System.in);
         
         float nota; // váriavel float para a entrada de números reais
-        float media = 6;
         
         System.out.print("Informe sua nota: ");
         nota = input.nextFloat(); // lê o número fornecido pelo usúario
         
         /* se formos utilizar apenas uma instrução dentro do if else, não necessita colocar chaves,
         por legibilidade SEMPRE utilize o bloco de chaves de abertura e fechamento */
-        if (nota >=media)
+        if (nota >= 6)
             System.out.println("Aprovado");
         else
             System.out.println("Reprovado");
