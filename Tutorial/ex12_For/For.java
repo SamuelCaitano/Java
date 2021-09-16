@@ -17,9 +17,8 @@ public class For
         após realizar a intrução dentro do for, incrementa 1 ao contador 
         esse loop será realizado até que contador seja MENOR IGUAL a 10*/
         for (int i = 1; i <= 10; i++)
-	{
+        {
             System.out.println(num + "x" + i +  " = " + (num*i) );
         }
     }    
 }
-
