@@ -1,9 +1,18 @@
 package CalculadoraDeEstoque;
 
+import java.util.Scanner;
+
 public class CalculadoraDeEstoque {
   public static void main(String[] args) {
-    double livroJava8 = 59.90;
-    double livroTDD = 59.90;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Entre com o 1 num: ");
+    double livroJava8 = input.nextDouble();
+    System.out.print("Entre com o 2 num: ");
+    double livroTDD = input.nextDouble();
+
+
     double soma = livroJava8 + livroTDD;
 
     System.out.println("O total em estoque é " + soma);
