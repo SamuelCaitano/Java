@@ -17,6 +17,8 @@ public class EntradaDoTeclado
         
         System.out.print("Entre com o segundo número inteiro: ");
         num2 = input.nextInt(); // lê o segundo número fornecido pelo usúario
+
+        input.close(); // Use o método close() para fechar o Scanner em Java após ler o conteúdo de um arquivo
         
         soma = num1 + num2; // soma os números e armazena o total em soma
         

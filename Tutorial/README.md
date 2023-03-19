@@ -89,6 +89,8 @@ ERRO COMUM DE PROGRAMAÇÃO :-1::closed_book:|
 Na linha 11 é uma **instrução de declaração de váriavel** que especifica o nome (*input*) e o tipo (*Scanner*) de uma váriavel utlizada nesse programa. Um **Scanner** permite leitura de dados (por exemplo, números e strings).
 O sinal de  igual (=) indica que a váriavel Scanner Input deve se **inicializada**. A palavra-chave **new** cria um objeto Scanner. O **objeto de entrada padrão, System in**, permite a leitura de *bits* de informações digitados pelo usúario.
 
+## ***Fechando Scanner em Java com close()***
+<code>input.close()</code>
 
 ## ***Declarando variáveis para armazenar números inteiros***
 
