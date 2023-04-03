@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Samuel
- *
- */
-module FolhaDePagamento {
-}
